@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_variable.scss",
+		"../scss/_header.scss"
+	],
+	"sourcesContent": [
+		"@import './variable';\n@import './header';\n\n .contact button {\n  background: $primaryBtn;\n}\n\n.contact {\n @extend header;\n background: lightcoral;\n width: 100% - 20%;\n}\n",
+		"$primaryBtn: rgb(255, 243, 80);\n$textColor: rgb(43, 43, 43);\n",
+		"@mixin flexCenter($direction, $background) {\n    height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: $direction;\n  background: $background;\n}\n\nheader {\n\n    @include flexCenter(column, red);\n  height: 100vh;\n  color: $textColor;\n  background: lightblue;\n  button {\n    background: $primaryBtn;\n    &::after {\n      content: 'hellppodds';\n    }\n  }\n  p {\n    background: $primaryBtn;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": ";;AESA,AAAA,MAAM,EFFN,QAAQ,CEED;EARH,MAAM,EAAE,KAAK;EACf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EAMQ,MAAM;EAL5B,UAAU,EAKoB,GAAG;EACjC,MAAM,EAAE,KAAK;EACb,KAAK,EDZK,OAAe;ECazB,UAAU,EAAE,SAAS;CAUtB;;;AAfD,AAME,MANI,CAMJ,MAAM,EFRR,QAAQ,CEQN,MAAM,CAAC;EACL,UAAU,EDhBD,OAAiB;CCoB3B;;;AAXH,AAQI,MARE,CAMJ,MAAM,AAEH,OAAO,EFVZ,QAAQ,CEQN,MAAM,AAEH,OAAO,CAAC;EACP,OAAO,EAAE,YAAY;CACtB;;;AAVL,AAYE,MAZI,CAYJ,CAAC,EFdH,QAAQ,CEcN,CAAC,CAAC;EACA,UAAU,EDtBD,OAAiB;CCuB3B;;;AFpBF,AAAA,QAAQ,CAAC,MAAM,CAAC;EACf,UAAU,ECJC,OAAiB;CDK7B;;;AAED,AAAA,QAAQ,CAAC;EAER,UAAU,EAAE,UAAU;EACtB,KAAK,EAAE,GAAU;CACjB"
+}

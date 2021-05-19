@@ -1,0 +1,88 @@
+$headerH: 57px;
+$headerFontSize: 16px;
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin headerSide($side) {
+  position: absolute;
+  top: 0;
+  $side: 0;
+  display: block;
+  width: 107px;
+  height: $headerH;
+}
+
+header {
+  min-width: 1064px;
+  .header__wrap {
+    position: relative;
+    width: 100%;
+    min-width: 360px;
+    height: $headerH;
+    padding: 0 11px;
+    border-bottom: 1px solid #dde1e5;
+  }
+
+  .header__menu {
+    @include headerSide(left);
+    @include flexCenter(row);
+    font-size: $headerFontSize;
+    span {
+      margin-left: 10px;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header__logo {
+    text-align: center;
+    padding: 16px 0;
+    a {
+      color: $color--black;
+      display: inline-block;
+      height: 100%;
+
+      img {
+        height: 24px;
+      }
+    }
+  }
+  .header__login {
+    @include headerSide(right);
+    @include flexCenter(row);
+    height: $headerH;
+    width: initial;
+    right: 0;
+
+    div {
+      padding: 10px;
+      margin-right: 10px;
+      font-size: $headerFontSize;
+      &:last-child {
+        min-width: 85px;
+        height: 38px;
+        padding: 9px 18px 0;
+        color: $color--black;
+        text-align: center;
+        border-radius: 19px;
+        border: 2px solid $color--black;
+        font-weight: 800;
+        &:hover {
+          transition: 0.5s;
+          background: $color--blue;
+          border-color: $color--blue;
+          a {
+            color: #fff;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

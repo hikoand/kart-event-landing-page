@@ -1,0 +1,109 @@
+.contents {
+  height: 2024px;
+  background: url('../img/con2_bg.jpg') no-repeat center 0;
+
+  .contents__inner {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+  }
+  .contents__bg {
+    background: url('../img/con2_c.png') no-repeat center 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1360px;
+    height: 2064px;
+    margin: -40px 0 0 -40px;
+
+    div {
+      position: absolute;
+    }
+
+    .con__icon {
+      width: 107px;
+      height: 156px;
+      background: url('../img/ev_ic.png') no-repeat;
+    }
+
+    .contents__bg_i_1 {
+      top: 204px;
+      left: 370px;
+    }
+
+    .contents__bg_i_2 {
+      top: 204px;
+      left: 870px;
+    }
+
+    .contents__bg_t_1 {
+      background: url('../img/con2_c_t1.png') no-repeat;
+      top: 330px;
+      left: 259px;
+      width: 341px;
+      height: 100px;
+    }
+
+    .contents__bg_t_2 {
+      background: url('../img/con2_c_t2.png') no-repeat;
+      top: 324px;
+      left: 812px;
+      width: 235px;
+      height: 100px;
+    }
+
+    .contents__character_1 {
+      background: url('../img/con2_c1.png') no-repeat;
+      top: 115px;
+      left: 483px;
+      width: 178px;
+      height: 184px;
+      opacity: 0;
+    }
+
+    .contents__character_1.on {
+      @include move__Ani(fadeIn, 0.3s, 0.3s);
+    }
+
+    .contents__character_2 {
+      background: url('../img/con2_c2.png') no-repeat;
+      top: 452px;
+      right: 9px;
+      width: 267px;
+      height: 295px;
+      opacity: 0;
+    }
+
+    .contents__character_2.on {
+      @include move__Ani(moveFromRight, 1s, 0.2s);
+      opacity: 1;
+    }
+
+    .contents__character_3 {
+      background: url('../img/con2_c3.png') no-repeat;
+      top: 871px;
+      left: 27px;
+      width: 243px;
+      height: 293px;
+      opacity: 0;
+    }
+
+    .contents__character_3.on {
+      @include move__Ani(moveFromLeft, 1s, 0.8s);
+      opacity: 1;
+    }
+
+    .contents__character_4 {
+      background: url('../img/con2_c4.png') no-repeat;
+      top: 1476px;
+      right: 5px;
+      width: 248px;
+      height: 350px;
+    }
+
+    .contents__character_4.on {
+      @include move__Ani(moveFromRight, 1s, 1s);
+      opacity: 1;
+    }
+  }
+}
