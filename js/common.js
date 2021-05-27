@@ -34,38 +34,19 @@ $(function () {
     }
   });
 
-  // character scroll move
+  //changing charactors position
 
-  $('.move__c').each(function (i) {
-    let = trans = '-';
-    let leftDir = '+';
-    let rightDir = '-';
-    let thisElem = $(this);
-    console.log(thisElem);
+  $(window).scroll(function () {
+    let leftNum = $('.banner__character_3 ').offset().top;
 
-    $(window).scroll(function () {
-      let thisOffset = thisElem.offset();
+    let moveTrue = 1 - window.scrollY / leftNum;
+    let what = window.scrollY / leftNum;
+    console.log(window.scrollY);
+    console.log(leftNum);
 
-      if ($(window).scrollTop() > 840 && $(window).scrollTop() < 1380) {
-        $('.banner__character_3').css({
-          left: rightDir + '=25px',
-        });
-
-        let leftNum = $('.banner__character_3 ').offset().left;
-        console.log(leftNum);
-
-        if (leftNum < 1042) {
-          console.log('stop');
-        }
-      }
-
-      // else if ($(window).scrollTop() > 1380 && $(window).scrollTop() > 1920) {
-      //   thisElem.css({
-      //     left: leftDir + '=25px',
-      //   });
-      // } else if ($(window).scrollTop() > 839) {
-      //   return;
-      // }
-    });
+    if (moveTrue < 1) {
+      $('.banner__character_3').css({ right: moveTrue * 400 });
+      $('.banner__character_2').css({ left: moveTrue * 400 });
+    }
   });
 });
