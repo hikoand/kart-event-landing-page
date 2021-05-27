@@ -69,13 +69,13 @@
  ```
 
  - SCSS 반복문을 이용한 snowdrop 효과
- ```css
-<!-- 1. 1 ~ 요소갯수까지 반복해서 실행 -->
+ ```scss
+    // 1 ~ 요소갯수까지 반복해서 실행
     @for $i from 1 through $SNOWDROPS_LENGTH {
-<!-- // 2. random()으로 0 ~ 기준으로 지정한 사이즈까지 받아와 사이즈를 출력한 뒤 abs()으로 절대값 취득 -->
+    // 2. random()으로 0 ~ 기준으로 지정한 사이즈까지 받아와 사이즈를 출력한 뒤 abs()으로 절대값 취득
     $size: abs(random($snow-size-base) - random($snow-size-base)) + 10px;
 
-<!-- 3. 가상선택자에 인터폴레이션을 사용하여 위치,너비,높이,애니메이션 속성을 각각 제어 -->
+    // 3. 가상선택자에 인터폴레이션을 사용하여 위치,너비,높이,애니메이션 속성을 각각 제어
     &:nth-child(#{$i}) {
       left: abs(random($left-position) - random($left-position)) + 0%;
       width: $size;
