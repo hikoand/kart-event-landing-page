@@ -70,7 +70,7 @@
 
  - SCSS 반복문을 이용한 snowdrop 효과
  ```scss
-    // 1 ~ 요소갯수까지 반복해서 실행
+    // 1. 1 ~ 요소갯수까지 반복해서 실행
     @for $i from 1 through $SNOWDROPS_LENGTH {
     // 2. random()으로 0 ~ 기준으로 지정한 사이즈까지 받아와 사이즈를 출력한 뒤 abs()으로 절대값 취득
     $size: abs(random($snow-size-base) - random($snow-size-base)) + 10px;
