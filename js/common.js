@@ -41,8 +41,6 @@ $(function () {
 
     let moveTrue = 1 - window.scrollY / leftNum;
     let what = window.scrollY / leftNum;
-    console.log(window.scrollY);
-    console.log(leftNum);
 
     if (moveTrue < 1) {
       $('.banner__character_3').css({ right: moveTrue * 400 });
